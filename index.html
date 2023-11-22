@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+<body>
+    <main class="container">
+        <div class="left-sidebar">
+            <div class="logo_image">
+                <img src="./Automa 1.png" alt="">
+            </div>
+            <div class="sidebar-btns">
+                <div class="buttons">
+                    <button class="add-Member-Btn">Add new Member</button>
+                </div>
+                <div class="buttons">
+                    <button class="generate-api-btn">Generate API Keys</button>
+                </div>
+            </div>
+            <button class="logout-btn">LOGOUT</button>
+        </div>
+        
+        <div class="dashboard">
+            <div class="search-area">
+                <div class="search-field">
+                    <input type="text" placeholder="Number of participants">
+                    <div class="search-icon">
+                        <img src="./search.png" alt="">
+                    </div>
+                </div>
+                <div class="menu-icon">
+                    <img src="./more-horizontal.png" alt="">
+                </div>
+            </div>
+            <div class="dashboard-contents">
+                <div class="dashboard-box">
+                    <img class="setup-camera-logo" src="./XMLID_1_.png" alt="">
+                    <p class="setup-camera-title"><span>Setup</span><br><span>Cameras</span></p>
+                </div>
+                <div class="dashboard-box">
+                    <canvas id="myChart" style="width:100%;max-width:600px;height: 100%;"></canvas>
+                </div>
+                <div class="dashboard-box">
+                    <img class="face-recognition-logo" src="./face-recognition-removebg.png" alt="">
+                    <p class="face-recognition-title"><span>Face</span><br><span>Recognition</span><br></p>
+                    <span class="live-title"><li>Live</li></span>
+                </div>
+                <div class="dashboard-box">
+                    <p class="camera-setting-title">Camera Settings</p>
+
+                    <!-- Camera Settings -->
+
+                    <div class="camera-number">
+                        <div class="cameras">
+                            <img src="./video.png" alt="">
+                            <span>Cam 1</span>
+                        </div>
+                        <div class="cameras">
+                            <img src="./video.png" alt="">
+                            <span>Cam 1</span>
+                        </div>
+                        <div class="cameras">
+                            <img src="./video.png" alt="">
+                            <span>Cam 1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-box">
+                    <div>
+                        <p class="people-add-title"><span>People</span><br><span>Added</span></p>
+                        <p class="people-add-count">69</p>  
+                    </div> 
+                    <canvas id="Chart" style="width:100%;max-width:600px;height: 100%; z-index: 20;"></canvas>
+                </div>
+            </div>
+            <div class="subscription-box"></div>
+            <div class="logo">
+                <img src="./Automa-A Logo.png" alt="">
+            </div>
+        </div>
+    </main>
+
+    <script src="./script.js" defer></script>
+        
+</body>
+</html>
