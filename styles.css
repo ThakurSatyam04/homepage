@@ -30,14 +30,15 @@ body, html {
   }
 
 .container{
+    position: relative;
     display: flex;
-    max-height: 100vh;
+    min-height: 100vh;
 }
 
 .left-sidebar{
     position: relative;
-    max-width: 20vw;
-    height: 100vh;
+    min-width: 20vw;
+    min-height: 100vh;
     padding: 40px;
     background-color: var(--body-color);
     display: flex;
@@ -188,8 +189,8 @@ textarea, input {
 
   .dashboard-box{
     position: relative;
-    width: 180px;
-    height: 180px;
+    width: 250px;
+    height: 250px;
     box-shadow: 10px 10px 30px 0px #AEAEC066;
     border: -10px -10px 30px 0px #FFFFFF;
     cursor: pointer;
@@ -315,7 +316,7 @@ textarea, input {
   .logo img{
     position: absolute;
     left: 50px;
-    bottom: 20px;
+    bottom: 5px;
     width: 50px;
     height: 50px;
   }
@@ -339,9 +340,9 @@ textarea, input {
   .subscription-box{
     position: absolute;
     bottom: 20px;
-    right: 5%;
-    width: 280px;
-    height: 280px;
+    right: 2%;
+    width: 250px;
+    height: 250px;
     box-shadow: 10px 10px 30px 0px #AEAEC066;
     box-shadow: -10px -10px 30px 0px #FFFFFF;
     cursor: pointer;
