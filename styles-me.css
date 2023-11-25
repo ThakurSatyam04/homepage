@@ -386,8 +386,19 @@ textarea, input {
     top: 20%;
     font-size: 1.5rem;
     font-weight: lighter;
-    background: rgba(217, 214, 214, 0.523);
+    /* background: rgba(217, 214, 214, 0.523); */
+
   }
+
+  .cameras-main-div {    
+    opacity: 0.3;
+  }
+
+  /* .cameras-main-div{
+    background: linear-gradient(to bottom, #EBECF0 0%, rgba(207, 206, 206, 0.154) 100%);
+    background: linear-gradient(to bottom, #EBECF0, rgba(207, 206, 206, 0.154));
+  } */
+
 
   .more-cameras{
     width: 100%;
