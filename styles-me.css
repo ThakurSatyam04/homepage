@@ -210,7 +210,6 @@ textarea, input {
   .menu-toggle-down img{
     width: auto !important;
     height: 50px !important;
-    /* display: none; */
   }
   .menu-toggle-up{
     width: 100%;
@@ -225,7 +224,6 @@ textarea, input {
   .menu-toggle-up img{
     width: auto !important;
     height: 50px !important;
-    /* display: none; */
   }
 
   .burger-icon:hover {
@@ -583,6 +581,10 @@ button.red {
 
   .menu-toggle-up{
     display: block;
+  }
+
+  .menu-toggle-down{
+    display: none;
   }
 
   .burger-icon {
