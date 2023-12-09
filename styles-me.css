@@ -38,7 +38,7 @@ body, html {
 .left-sidebar{
     position: relative;
     min-width: 20vw;
-    min-height: 100vh;
+    height: 100vh;
     padding: 40px;
     background-color: var(--body-color);
     display: flex;
@@ -65,14 +65,6 @@ body, html {
     flex-direction: column;
     gap: 30px;
 }
-
-/* .buttons{
-    color: #9B9DA3;
-    box-shadow: 10px 10px 30px 0px rgba(174, 174, 192, 0.4);
-    background-color: rgba(240, 240, 243, 1);
-    cursor: pointer;
-    border-radius: 98px;
-} */
 
 .add-Member-Btn:active, .generate-api-btn:active {
     background: #e5e5e5;
@@ -105,6 +97,7 @@ body, html {
     bottom: 2rem;
     left: 50%;
     margin-left: -50px;
+    margin-bottom: 30px;
     border: none;
     color: rgba(187, 42, 47, 1);
     background-color: rgba(240, 240, 243, 1);
@@ -202,7 +195,39 @@ textarea, input {
     align-items: center;
     justify-content: center;
   }
+
   
+  .menu-toggle-down{
+    width: 100%;
+    max-height: 50px;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    text-align: center;
+    display: none;
+  }
+  
+  .menu-toggle-down img{
+    width: auto !important;
+    height: 50px !important;
+    /* display: none; */
+  }
+  .menu-toggle-up{
+    width: 100%;
+    max-height: 50px;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    text-align: center;
+    display: none;
+  }
+  
+  .menu-toggle-up img{
+    width: auto !important;
+    height: 50px !important;
+    /* display: none; */
+  }
+
   .burger-icon:hover {
     box-shadow: var(--outset-shadows-hovered);
   }
@@ -230,16 +255,6 @@ textarea, input {
     gap: 40px;
     padding: 30px;
   }
-
-  /* .dashboard-box{
-    position: relative;
-    width: 250px;
-    height: 250px;
-    box-shadow: 10px 10px 30px 0px #AEAEC066;
-    border: -10px -10px 30px 0px #FFFFFF;
-    cursor: pointer;
-    border-radius: 10px;
-  } */
 
   .dashboard-box,.subscription-box {
     position: relative;
@@ -294,30 +309,6 @@ textarea, input {
     width: 100%;
     color: #AE1100;
   }
-/* 
-  .dashboard-box:hover{
-    transition: all 0.3s ease-in-out;
-    transform: scale(1.06);
-    border-radius: 10px;
-    filter: brightness(70%);
-    animation: blink 2s infinite;
-  } */
-
-  /* .dashboard-box:active {
-    background: #e5e5e5;
-    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-       -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-            box-shadow: inset 0px 0px 5px #c1c1c1;
-     outline: none;
-  } */
-
-/* .dashboard-box:focus {
-    background: #e5e5e5;
-    outline: none;
-    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-       -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-            box-shadow: inset 0px 0px 5px #c1c1c1;
-  } */
 
   .setup-camera-logo{
     height: 80px;
@@ -566,9 +557,8 @@ button.red {
 }
 
 
-/* For mobile view */
-
-@media only screen and (max-width: 768px) {
+/* For tab view */
+@media only screen and (max-width: 820px) and (min-width: 450px)  {
 
   .body{
     overflow-x: hidden;
@@ -579,7 +569,20 @@ button.red {
 
   .left-sidebar{
     position: relative;
-    min-height: 60vh;
+    max-height: 60vh;
+    border-radius: 0px 0px 40px 40px
+  }
+
+  .logo_image {
+    width: 50%;
+    height: auto;
+    margin-left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+  }
+
+  .menu-toggle-up{
+    display: block;
   }
 
   .burger-icon {
@@ -589,12 +592,17 @@ button.red {
     right: 30px;
   }
 
+  .logo_image img{
+    margin-top: 15px;
+  }
+
   .search-field{
     width: 100%;
   }
 
   .search-field input{
     width: 70vw;
+    margin-top:27px;
   }
 
   .dashboard{
@@ -615,18 +623,21 @@ button.red {
     padding: 50px 0 0 0;
   }
 
+    .subscription-box{
+      margin: auto;
+    }
+
   .subscription-box{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 100%;
+    position: relative;
+    margin-left: auto;
+    width: 350px;
     height: 350px;
     box-shadow: 10px 10px 30px 0px #AEAEC066;
     box-shadow: -10px -10px 30px 0px #FFFFFF;
     cursor: pointer;
     border-radius: 10px;
+    margin-top: 50px;
   }
-
   .logo{
     display: none;
   }
@@ -637,11 +648,16 @@ button.red {
     font-weight: lighter;
     font-size: 2rem;
   }
+  .left-sidebar.hidden{
+    transform: translateY(-90%);
+    display: none;
+  }
+  
 }
 
-/* for tab view */
+/* for mobile view */
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 480px) {
 
   .body{
     overflow-x: hidden;
@@ -652,7 +668,8 @@ button.red {
 
   .left-sidebar{
     position: relative;
-    min-height: 70vh;
+    max-height: 70vh;
+    border-radius: 0px 0px 40px 40px;
   }
 
   .burger-icon {
@@ -662,12 +679,21 @@ button.red {
     right: 30px;
   }
 
+  .logo_image img{
+    margin-top: 15px;
+  }
+
   .search-field{
     width: 100%;
   }
 
   .search-field input{
     width: 70vw;
+    margin-top:27px;
+  }
+
+  .menu-toggle-up{
+    display: block;
   }
 
   .dashboard{
@@ -694,16 +720,16 @@ button.red {
     box-shadow: -10px -10px 30px 0px #FFFFFF;
     cursor: pointer;
     border-radius: 10px;
+    margin: auto;
   }
 
   .logo{
-    position: absolute;
-    margin-left: 10px;
-    bottom: 20px;
-    width: 50px;
-    height: 50px;
+    display: none;
   }
 
-
+  .left-sidebar.hidden{
+    transform: translateY(-90%);
+    display: none;
+  }
 }
   

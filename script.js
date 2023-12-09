@@ -155,4 +155,43 @@ const todayElement = document.querySelector('.vertical-slider-today');
 yesterdayElement.style.height = `${Math.min(yesterdayData, 100)}%`;
 todayElement.style.height = `${Math.min(todayData, 100)}%`;
 
+
+// script to toggle navbar in phone and tab view
+
+const toggle_btn_down = document.querySelector(".menu-toggle-down")
+const toggle_btn_up = document.querySelector(".menu-toggle-up")
+var left_sidebar = document.querySelector(".left-sidebar")
+var display = true;
+
+function handleToggleClose(){
+  console.log("upArrow clicked")
+  if(true){
+    left_sidebar.classList.toggle('hidden')
+  }
+  toggle_btn_up.style.display = "none"
+  toggle_btn_down.style.display = "block"
+
+}
+
+function handleToggleOpen(){
+  console.log("downArrow clicked")
+  if(true){
+    left_sidebar.classList.toggle('hidden')
+  }
+  toggle_btn_down.style.display = "none"
+  toggle_btn_up.style.display = "block"
+
+}
+
+toggle_btn_down.addEventListener('click', handleToggleOpen)
+toggle_btn_up.addEventListener('click', handleToggleClose)
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 820) {
+    toggle_btn_up.style.display = "none";
+  } else {
+    toggle_btn_up.style.display = "block";
+  }
+});
+
   
